@@ -1,6 +1,8 @@
 # tcalc
 Time calculator
 
+[Demo page](https://pgood.space/userfiles/file/tcalc/dist/)
+
 ## Project setup
 ```
 npm install
