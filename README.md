@@ -1,7 +1,7 @@
 # tcalc
 Time calculator
 
-[Demo page](https://pgood.space/userfiles/file/tcalc/dist/)
+[Demo page](https://pgood.space/tcalc/)
 
 ## Project setup
 ```
