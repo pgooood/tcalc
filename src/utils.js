@@ -1,4 +1,11 @@
 /**
+ * tcalc
+ * @version 1.0.0
+ * @author Pavel Khoroshkov <me@pgood.space>
+ * @link https://github.com/pgooood/tcalc
+ */
+
+/**
  * Returns or set a caret postion of focused input element
  */
 function caretPos(oField,caretPos = null){

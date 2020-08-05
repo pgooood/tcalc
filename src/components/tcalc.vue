@@ -1,5 +1,5 @@
 <template>
-	<b-card class="w-50 mx-auto">
+	<b-card class="mx-auto" style="max-width: 30rem">
 		<b-form-group>
 			<b-input-group>
 				<masked-input v-model="maskedInputValue" ref="maskedInput" v-if="isTimeMode"
@@ -29,23 +29,16 @@
 				:command-keys="commandKeys"></dividual-input>
 		</b-form-group>
 		<b-row class="mb-4">
-			<b-col>
-
-			</b-col>
-			<b-col>
-
-			</b-col>
-			<b-col>
-
-			</b-col>
+			<b-col></b-col>
+			<b-col></b-col>
+			<b-col></b-col>
 			<b-col>
 				<b-button variant="info" class="w-100 tcalc-btn" @click="reset">AC</b-button>
 			</b-col>
 		</b-row>
 		<b-row class="mb-4">
 			<b-col>
-				<!--b-button variant="outline-secondary" class="w-100 tcalc-btn" @click="calcKeyPress('7')">7</b-button-->
-				<button type="button" class="btn btn-outline-secondary w-100 tcalc-btn" @click="calcKeyPress('7')">7</button>
+				<b-button variant="outline-secondary" class="w-100 tcalc-btn" @click="calcKeyPress('7')">7</b-button>
 			</b-col>
 			<b-col>
 				<b-button variant="outline-secondary" class="w-100 tcalc-btn" @click="calcKeyPress('8')">8</b-button>
@@ -99,11 +92,6 @@
 				<b-button variant="info" class="w-100 tcalc-btn" @click="push('+')">+</b-button>
 			</b-col>
 		</b-row>
-		<!--
-		<br>
-		value: {{ inputValue }}<br>
-		arStack: {{ arStack }}<br>
-		-->
 	</b-card>
 </template>
 
@@ -165,16 +153,6 @@ export default {
 				return this.obInput
 			this.obInput.beLike(cTime)
 			this[sourceModel].beLike(cTime)
-			/*
-			switch(sourceModel){
-				case 'maskedInputValue':
-					this.dividualInputValue.clear()
-					break
-				case 'dividualInputValue':
-					this.maskedInputValue.clear()
-					break
-			}
-			*/
 		}
 		,focus(component){
 			switch(component.$options._componentTag){
@@ -203,6 +181,7 @@ export default {
 				this.reset()
 				// переключаем поле ввода в режим ввода времени
 				this.inputMode = 'time'
+				this.activeInput = this.$refs.maskedInput
 				// устанавливаем в поле ввода рссчитанное значение
 				this.obInput.time = result
 				this.maskedInputValue.time = result
@@ -242,5 +221,5 @@ export default {
 			return res
 		}
 	}
-};
+}
 </script>

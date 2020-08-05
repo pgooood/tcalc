@@ -1,3 +1,10 @@
+/**
+ * tcalc
+ * @version 1.0.0
+ * @author Pavel Khoroshkov <me@pgood.space>
+ * @link https://github.com/pgooood/tcalc
+ */
+
 import Vue from 'vue'
 import App from './App.vue'
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'

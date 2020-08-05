@@ -7,7 +7,6 @@
 </template>
 
 <script>
-
 import { caretPos, calcTime } from '../utils.js'
 
 export default {
@@ -83,5 +82,4 @@ export default {
 		}
 	}
 }
-
 </script>

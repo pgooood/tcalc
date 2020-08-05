@@ -8,7 +8,6 @@
 </template>
 
 <script>
-
 import { caretPos,  calcTime, caretSelectionRange } from '../utils.js'
 
 export default {
@@ -185,5 +184,5 @@ export default {
 			}
 		}
 	}
-};
+}
 </script>

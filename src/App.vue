@@ -1,15 +1,10 @@
 <template>
-	<div id="app" class="container">
-		<header class="container my-4 text-center" style="font-size: 4rem">
+	<section id="app" class="text-center p-3">
+		<h3 class="my-4" style="font-size: 4rem">
 			<font-awesome-icon icon="calculator" class="text-info"/> tcalc
-		</header>
-		<main class="text-center">
-			<tcalc/>
-		</main>
-		<footer class="container text-muted my-4 text-center">
-			<a href="https://pgood.space">pgood.space</a>
-		</footer>
-	</div>
+		</h3>
+		<tcalc/>
+	</section>
 </template>
 
 <script>
@@ -26,8 +21,4 @@ export default {
 <style lang="scss">
 @import 'node_modules/bootstrap/scss/bootstrap';
 @import 'node_modules/bootstrap-vue/src/index.scss';
-//@import 'node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss';
-//@import "node_modules/@fortawesome/fontawesome-free/scss/solid.scss"
-
-
 </style>

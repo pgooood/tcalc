@@ -7,8 +7,7 @@
 </template>
 
 <script>
-
-import { caretPos } from '../utils.js'
+import { caretPos, calcTime } from '../utils.js'
 
 export default {
 	name: 'numberInput'
@@ -26,13 +25,13 @@ export default {
 			this.inputElement().value = this.value
 	}
 	,watch:{
-		value(){
+		value(values){
 			this.inputElement().value = this.value
 		}
 	}
 	,methods: {
 		inputElement(){
-			return this.$refs.input;
+			return this.$refs.input
 		}
 		,focus(){
 			this.inputElement().focus()
@@ -54,7 +53,7 @@ export default {
 				return inputElement ? new String(inputElement.value) : ''
 			if(inputElement && inputElement.value !== value){
 				inputElement.value = value
-				this.$emit('input',calcTime.parse(value))
+				this.$emit('input',value)
 			}
 		}
 		,onKeydown(event){
@@ -69,9 +68,7 @@ export default {
 						event.preventDefault()
 					}
 			}
-			
 		}
 	}
 }
-
 </script>
